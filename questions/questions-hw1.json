@@ -135,38 +135,6 @@
         ]
     },
     {
-        "question": "Determine the output of the following Python code:",
-	      "code": "a=\"1\"\nb=\"2\"\nprint(a+b)",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "1",
-                "correct": false,
-                "feedback": "No. When strings are operated on by +, they are concatenated."
-            },
-            {
-                "answer": "2",
-                "correct": false,
-                "feedback": "No. When strings are operated on by +, they are concatenated."
-            },
-            {
-                "answer": "3",
-                "correct": false,
-                "feedback": "No. When strings are operated on by +, they are concatenated."
-            },
-            {
-                "answer": "12",
-                "correct": true,
-                "feedback": "Yes. The + operator will concatenate the strings \"1\" and \"2\"."
-            },
-            {
-                "answer": "error",
-                "correct": false,
-                "feedback": "No. The + operator for strings performs string concatenation."
-            }
-        ]
-    },
-    {
         "question": "What is the output of the following Python program?",
         "code": "dogs=['Amber', 'Madden', 'Roxy', 'Annie']\nprint(dogs[2])",
         "answers": [
@@ -238,6 +206,59 @@
                 "code": "mylist+={3}",
                 "correct": false,
                 "feedback": "False. In Python, {3} will be a set, and the + operator is not defined for a list and a set."
+            }
+        ]
+    },
+    {
+        "question": "Which of these should be used to return 5 samples <b>with replacement</b> from a list called values, which contains 10 numbers?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "random.seed(values,<br> k=5)",
+                "correct": false,
+                "feedback": "No. random.seed() initializes the state of the random number generator. It only takes 1 argument."
+            },
+            {
+                "code": "random.shuffle(values,<br> k=5)",
+                "correct": false,
+                "feedback": "No. random.shuffle() permutes the entire list in place."
+            },
+            {
+                "code": "random.sample(values,<br> k=5)",
+                "correct": false,
+                "feedback": "No. random.sample() draws values without replacement"
+            },
+            {
+                "code": "random.choices(values,<br> k=5)",
+                "correct": true,
+                "feedback": "Yes, random.choices() draws values with replacement."
+            }
+
+        ]
+    },
+    {
+        "question": "Which of these should be used to return 5 samples <b>without replacement</b> from a list called values, which contains 10 numbers?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "random.seed(values,<br> k=5)",
+                "correct": false,
+                "feedback": "No. random.seed() initializes the state of the random number generator. It only takes 1 argument."
+            },
+            {
+                "code": "random.shuffle(values,<br> k=5)",
+                "correct": false,
+                "feedback": "No. random.shuffle() permutes the entire list in place."
+            },
+            {
+                "code": "random.sample(values,<br> k=5)",
+                "correct": true,
+                "feedback": "Correct. random.sample() draws the specified number of values without replacement"
+            },
+            {
+                "code": "random.choices(values,<br> k=5)",
+                "correct": false,
+                "feedback": "No. random.choices() draws values with replacement."
             }
         ]
     }
